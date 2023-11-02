@@ -1,4 +1,6 @@
+
 const hre = require("hardhat");
+//0x5FbDB2315678afecb367f032d93F642f64180aa3
 
 async function main() {
   const CrowdFunding = await hre.ethers.getContractFactory("CrowdFunding");
@@ -6,8 +8,12 @@ async function main() {
 
   await crowdFunding.deployed();
 
-  console.log(`crowdFunding deployed to ${crowdFunding.address}`);
+  console.log(`CrowdFunding deployed to ${crowdFunding.address}`);
+  
 }
+
+  
+
 
 main().catch((error) => {
   console.error(error);
